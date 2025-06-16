@@ -1,0 +1,19 @@
+{
+  "commands": [
+    {
+      "name": "backup",
+      "params": "--dir [könyvtár]",
+      "desc": "Biztonsági mentés készítése a megadott könyvtárról."
+    },
+    {
+      "name": "update-system",
+      "params": "",
+      "desc": "A rendszer frissítése csomagkezelőn keresztül."
+    },
+    {
+      "name": "clean-temp",
+      "params": "--force",
+      "desc": "Ideiglenes fájlok törlése. A --force paraméter megerősítés nélkül töröl."
+    }
+  ]
+}
