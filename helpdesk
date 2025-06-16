@@ -1,0 +1,30 @@
+#!/bin/bash
+
+JSON_FILE="/path/to/your/json/commands.json"
+
+# Check for the json if exists
+if [[ ! -f "$JSON_FILE" ]]; then
+  echo "ERROR! No commands.json file found."
+  exit 1
+fi
+
+if ! command -v jq &> /dev/null; then
+  echo "ERROR! jq not installed. Installing: sudo apt install jq"
+  exit 1
+fi
+
+echo "📋 COMMAND PALETTE 📋"
+echo "-------------------------------"
+
+jq -c '.commands[]' "$JSON_FILE" | while read -r command; do
+  name=$(echo "$command" | jq -r '.name')
+  params=$(echo "$command" | jq -r '.params')
+  desc=$(echo "$command" | jq -r '.desc')
+
+  echo "🔹 Command: $name"
+  if [[ -n "$params" ]]; then
+    echo "   📌 Params: $params"
+  fi
+  echo "   📝 Description: $desc"
+  echo ""
+done
