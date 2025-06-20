@@ -1,14 +1,14 @@
 {
   "commands": [
     {
-      "name": "backup",
-      "params": "--dir",
-      "desc": ""
+      "name": "speedtest",
+      "params": "--no-upload;--no-download;--single;--simple;--secure",
+      "desc": "speedtest by ookla"
     },
     {
-      "name": "update-system",
+      "name": "vcgencmd measure_temp",
       "params": "",
-      "desc": ""
+      "desc": "display celsius of Pi cpu"
     },
     {
       "name": "clean-temp",
