@@ -11,9 +11,9 @@
       "desc": "display celsius of Pi cpu"
     },
     {
-      "name": "clean-temp",
-      "params": "--force",
-      "desc": ""
-    }
+      "name": "usbctl",
+      "params": "enable / disable a / all / 1 / 2 / 3 / 4",
+      "desc": "Script for controlling the usb ports of the Pi 5, 2 usb 3.0 and usb 2.0."
+    },
   ]
 }
