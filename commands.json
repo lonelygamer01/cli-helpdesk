@@ -15,5 +15,10 @@
       "params": "enable / disable a / all / 1 / 2 / 3 / 4",
       "desc": "Script for controlling the usb ports of the Pi 5, 2 usb 3.0 and usb 2.0."
     },
+    {
+      "name": "gpgcrypt",
+      "params": "encrypt/decrypt file-or-folder-name",
+      "desc": "enter the password and boom the file or folder is now a .gpg file noone can open it decrypt the file and boom you can access the files"
+    },
   ]
 }
